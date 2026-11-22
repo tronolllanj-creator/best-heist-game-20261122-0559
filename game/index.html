@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Velvet Vault: Midnight Heist</title>
+<style>
+  :root{ color-scheme: dark; }
+  html,body{ margin:0; padding:0; height:100%; background:#0b0906; color:#efe6d0;
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    overflow:hidden; }
+  #wrap{ position:fixed; inset:0; display:flex; flex-direction:column; } 
+  #stage{ position:relative; flex:1 1 auto; min-height:0; display:flex; align-items:center;
+    justify-content:center; background:
+      radial-gradient(1200px 700px at 50% 30%, #1a140d 0%, #0b0906 70%), #0b0906; }
+  canvas{ display:block; background:#0d0b09; border-radius:2px;
+    box-shadow:0 0 0 1px #241c14, 0 24px 70px rgba(0,0,0,0.65), inset 0 0 120px rgba(0,0,0,0.5); }
+  #status{ flex:0 0 auto; padding:9px 14px; background:#0f0c08;
+    border-top:1px solid #241c14; font-size:13px; letter-spacing:.3px; color:#9a8f7a;
+    display:flex; align-items:center; gap:10px; }
+  #status b{ color:#efe6d0; font-weight:600; }
+  #status .tag{ margin-left:auto; font-size:11px; opacity:.55; letter-spacing:.5px; }
+  .dot{ width:8px; height:8px; border-radius:50%; background:#59d867; box-shadow:0 0 8px #59d86788; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="stage"><canvas id="game" width="1280" height="720" aria-label="Velvet Vault heist game"></canvas></div>
+  <div id="status"><span class="dot" id="sdot"></span><b>VELVET VAULT: MIDNIGHT HEIST</b>
+    <span>stealth the gallery &middot; dodge cameras &middot; raid the vault &middot; run the penthouse</span>
+    <span class="tag">WASD move &middot; Shift sneak &middot; Space dash &middot; E grab &middot; Click coin &middot; M mute</span></div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
